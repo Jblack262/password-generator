@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <form class="pass-form" onSubmit="generatePassword(event)">
+    <input type="text" placeholder="Service" id="service" required>
+    <label for="pass-length"></label>
+    <div class="range-input">
+      <input type="range" id="pass-length" min="6" max="25" value="12" step="1" 
+       oninput="updateLabel()" onchange="updateLabel()">
+      <label for="pass-length" id="pass-length-label"></label>
+    </div>
+  
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="saved-passwords">
+    <div class="labels">
+      <p>URL</p>
+      <p>Password</p>
+    </div>
+    <ul id="password-list"></ul>
+  </div>
+
+  <button onClick="localStorage.removeItem('savedPasswords');" class="clear-storage">Clear Local Storage</button>
+
+  <script src="./main.js"></script>
+</body>
+</html>

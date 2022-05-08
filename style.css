@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'password';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://jsbin-user-assets.s3.amazonaws.com/rafaelcastrocouto/password.ttf);
+}
+
+
+.pass-form {
+  display: flex;
+  flex-direction: column;
+  width: clamp(33vw, 40rem, 95vw);
+  margin: 2rem;
+  margin-inline: auto;
+}
+.pass-form input[type="text"] {
+  font-size: 1.5rem;
+  padding: .25rem .5rem;
+}
+.pass-form button {
+  font-size: 1.5rem;
+  padding: .25rem .5rem;
+  width: max-content;
+  margin-block: .5rem;
+  margin-left: auto;
+}
+
+.range-input {
+  display: flex;
+  width: 100%;
+}
+.range-input input {
+  width: 100%;
+}
+.range-input label {
+  font-size: 1.5rem;
+}
+
+
+.saved-passwords {
+  display: flex;
+  flex-direction: column;
+  width: clamp(33vw, 40rem, 95vw);
+  margin: 2rem;
+  margin-inline: auto;
+}
+.saved-passwords .labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+}
+.saved-passwords .labels p {
+  margin: 0;
+}
+.saved-passwords ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.saved-passwords ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.saved-passwords ul li p.no-passwords {
+  margin-inline: auto;
+}
+.saved-passwords ul li:nth-child(even) {
+  background-color: lightgray;
+}
+
+.password {
+  font-family: 'password';
+}
+.password:hover {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.clear-storage {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
